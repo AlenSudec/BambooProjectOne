@@ -1,17 +1,32 @@
+body {
+  margin: 0px;
+  font-family: Raleway; }
+
 .navigation-bar {
   background: #87DE87;
   display: flex;
   justify-content: space-between;
   align-items: center; }
   .navigation-bar .navigation-bar__logo {
-    margin-left: 108px; }
-    .navigation-bar .navigation-bar__logo h1 {
+    margin-left: 108px;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 1fr; }
+    .navigation-bar .navigation-bar__logo .navigation-bar__box--white {
       background: #ffffff;
-      padding: 3px; }
+      grid-row: 3/7;
+      grid-column: 1/2;
+      width: 90px; }
+    .navigation-bar .navigation-bar__logo .navigation-bar__text {
+      grid-row: 2/11;
+      grid-column: 1/2; }
   .navigation-bar .navigation-bar__spacer {
     margin-left: auto; }
   .navigation-bar .navigation-bar__section {
-    margin-right: 108px; }
+    margin-right: 108px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
   .navigation-bar .navigation-bar__link {
     color: #333333;
     margin-left: 12px;
@@ -25,10 +40,46 @@
     background: #ffffff;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
     margin-left: 10px;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase; }
+    padding: 9px; }
+    .navigation-bar .navigation-bar__button a {
+      text-transform: uppercase;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      color: #333333; }
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(8, 1fr); }
+
+.hero-container__img {
+  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.25);
+  grid-column: 1/17;
+  grid-row: 1/9;
+  justify-self: stretch; }
+
+.hero-container__box {
+  grid-column: 3/8;
+  grid-row: 3/6;
+  z-index: 10;
+  display: flex;
+  flex-direction: row; }
+  .hero-container__box .hero-container__spacer--green {
+    background: #87DE87;
+    width: 100px; }
+  .hero-container__box .hero-container__content {
+    background: #333333;
+    padding-left: 30px;
+    padding-right: 15px;
+    color: #FEFEFE; }
+    .hero-container__box .hero-container__content h1 {
+      font-weight: 600;
+      font-size: 48px; }
+    .hero-container__box .hero-container__content p {
+      font-weight: 400;
+      font-size: 18px; }
 
 /*# sourceMappingURL=main.css.map */
