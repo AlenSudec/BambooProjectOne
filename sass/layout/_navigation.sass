@@ -4,14 +4,17 @@ body
 
 .navigation-bar
     background: #87DE87
-    display: flex
-    justify-content: space-between
-    align-items: center
+    
     //needs + 20px in height
     //gap needed
-    
+    .navigation-bar__content
+        padding-left: 108px
+        padding-right: 108px
+        display: flex
+        justify-content: space-between
+        align-items: center
     .navigation-bar__logo
-        margin-left: 108px
+        
         display: grid
         grid-template-rows: repeat( 10, 1fr)
         grid-template-columns: 1fr
@@ -36,7 +39,7 @@ body
     
 
     .navigation-bar__section
-        margin-right: 108px
+       
         display: flex
         flex-direction: row
         align-items: center
