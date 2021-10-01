@@ -1,0 +1,91 @@
+.footer-container
+    background: #87DE87
+    padding-left: 108px
+    padding-right: 108px
+    padding-top: 48px
+    padding-bottom: 96px
+    display: grid
+    gap: 24px
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    
+    //fix logo size
+    .footer-container__logo
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        display: grid
+        grid-template-rows: repeat( 11, 1fr)
+        grid-template-columns: 1fr
+        .footer-container__box--white
+            background: #ffffff
+            grid-row: 3 / 7
+            grid-column: 1/2
+            width: 120px
+
+        .footer-container__text
+
+            grid-row: 4 / 10
+            grid-column: 1/2
+
+
+    .footer-container__about
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        display: flex
+        flex-direction: column
+        gap: 10px
+        .footer-container__name
+            font-weight: 600
+            font-size: 24px
+            
+    .footer-container__products
+        grid-column: 4 / 5
+        grid-row: 2 / 3
+        display: flex
+        flex-direction: column
+        gap: 10px
+        > :first-child
+            font-weight: 600
+    .footer-container__company
+        grid-column: 7 / 8
+        grid-row: 2 / 3
+        display: flex
+        flex-direction: column
+        gap: 10px
+        > :first-child
+            font-weight: 600
+    .footer-container__socials
+        grid-column: 10 / 12
+        grid-row: 2 / 3
+        display: flex
+        flex-direction: column
+        gap: 18px
+        > :first-child
+            font-weight: 600
+    .footer-container__pictures
+        display: flex
+        justify-content: space-between
+    .footer-container__elipse
+        width: 20px !important
+        height: 20px !important
+        background: #333333
+        border-radius: 50%
+        padding: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+.bottom-nav
+    background: #333333
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    padding-left: 108px
+    padding-right: 108px
+    padding-top: 13px
+    padding-bottom: 14px
+    color: #fefefe
+    font-weight: 400
+    font-size: 18px
+    gap: 36px
+    > :first-child
+        margin-right: auto
