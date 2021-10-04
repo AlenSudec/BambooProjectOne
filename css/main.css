@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+  display: none; }
+
 body {
   margin: 0px;
   font-family: Raleway; }
@@ -5,22 +8,18 @@ body {
 .navigation-bar {
   background: #87DE87; }
   .navigation-bar .navigation-bar__content {
-    padding: 12px 108px;
+    padding: 29px 108px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .navigation-bar .navigation-bar__logo {
-    display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: 1fr; }
-    .navigation-bar .navigation-bar__logo .navigation-bar__box--white {
-      background: #ffffff;
-      grid-row: 3/7;
-      grid-column: 1/2;
-      width: 90px; }
-    .navigation-bar .navigation-bar__logo .navigation-bar__text {
-      grid-row: 2/11;
-      grid-column: 1/2; }
+  .navigation-bar .navigation-bar__box--white {
+    background: #ffffff;
+    width: 85px;
+    height: 30px;
+    padding: 6px; }
+    .navigation-bar .navigation-bar__box--white .navigation-bar__text {
+      z-index: 10;
+      position: relative; }
   .navigation-bar .navigation-bar__spacer {
     margin-left: auto; }
   .navigation-bar .navigation-bar__section {
@@ -210,25 +209,20 @@ body {
 
 .footer-container {
   background: #87DE87;
-  padding: 48px 108px 96px;
+  padding: 0px 108px 96px;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr); }
-  .footer-container .footer-container__logo {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-rows: repeat(11, 1fr);
-    grid-template-columns: 1fr; }
-    .footer-container .footer-container__logo .footer-container__box--white {
-      background: #ffffff;
-      grid-row: 3/7;
-      grid-column: 1/2;
-      width: 120px; }
-    .footer-container .footer-container__logo .footer-container__text {
-      grid-row: 4/10;
-      grid-column: 1/2; }
+  .footer-container .footer-container__box--white {
+    background: #ffffff;
+    width: 115px;
+    height: 30px;
+    padding: 8px;
+    align-self: center; }
+    .footer-container .footer-container__box--white .footer-container__text {
+      z-index: 10;
+      position: relative; }
   .footer-container .footer-container__about {
     grid-column: 1/2;
     grid-row: 2/3;
