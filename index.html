@@ -5,9 +5,29 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
         <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
         <link rel="stylesheet" href="css/main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Bamboo - Project One</title>
     </head>
     <body>
+        <div id="hamburger-block" class="hamburger-block" style="display: none;">
+            <div class="hamburger-block__button">
+                <a class="hamburger-block__exit" onclick="hideHamburger()">X</a>
+            </div>
+            <div class="hamburger-block__section">
+                <a class="hamburger-block__link" href="javascript:void(0);">About</a>
+                <a class="hamburger-block__link" href="javascript:void(0);">Pricing</a>
+                <a class="hamburger-block__link" href="javascript:void(0);">Testimonials</a>
+                <a class="hamburger-block__link" href="javascript:void(0);">Blog</a>
+                <a class="hamburger-block__link" href="javascript:void(0);">Contact</a>
+            </div>
+            <div class="hamburger-block__button-get">
+                <a href="javascript:void(0);">GET IT NOW</a>
+            </div>
+        </div>
+        <script>
+            
+        </script>
         <nav>
             <div class="navigation-bar">
                 <div class="navigation-bar__content">
@@ -18,14 +38,32 @@
                     </div>
                     <div class="navigation-bar__spacer"></div>
                     <div class="navigation-bar__section">
-                        <a class="navigation-bar__link" href="#">About</a>
-                        <a class="navigation-bar__link" href="#">Pricing</a>
-                        <a class="navigation-bar__link" href="#">Testimonials</a>
-                        <a class="navigation-bar__link" href="#">Blog</a>
-                        <a class="navigation-bar__link" href="#">Contact</a>
+                        <a class="navigation-bar__link" href="javascript:void(0);">About</a>
+                        <a class="navigation-bar__link" href="javascript:void(0);">Pricing</a>
+                        <a class="navigation-bar__link" href="javascript:void(0);">Testimonials</a>
+                        <a class="navigation-bar__link" href="javascript:void(0);">Blog</a>
+                        <a class="navigation-bar__link" href="javascript:void(0);">Contact</a>
                         <div class="navigation-bar__button">
-                            <a href="#">GET IT NOW</a>
+                            <a href="javascript:void(0);">GET IT NOW</a>
                         </div>
+                    </div>
+                    <div class="navigation-bar__hamburger" style="display: none;">
+                        <a class="icon" href="javascript:void(0);" onclick="showHamburger()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <script>
+                            let hamburgerBlock = document.getElementById("hamburger-block");
+                            function showHamburger(){
+                                hamburgerBlock.style.display = "block";
+                                var x = window.scrollX;
+                                var y = window.scrollY;
+                                window.onscroll=function(){window.scrollTo(x,y); };
+                            }
+                            function hideHamburger(){
+                                window.onscroll=function(){};
+                                hamburgerBlock.style.display = "none";
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -79,7 +117,7 @@
                                 <img class="section-card__img" src="pictures/solar1.png">
                             </div>
                             <div class="section-card__titles">
-                                <div class="section-card__titleMain">Card Title</div>
+                                <div class="section-card__title-main">Card Title</div>
                                 <div class="section-card__subtitle">Card Subtitle</div>
                             </div>
                         </div>
@@ -102,7 +140,7 @@
                                 <img class="section-card__img" src="pictures/wind1.png">
                             </div>
                             <div class="section-card__titles">
-                                <div class="section-card__titleMain">Card Title</div>
+                                <div class="section-card__title-main">Card Title</div>
                                 <div class="section-card__subtitle">Card Subtitle</div>
                             </div>
                         </div>
@@ -124,7 +162,7 @@
             <div class="subsection__main-title">
                 Section Title
             </div>
-            <div class="subsection__content">
+            <div class="subsection__content subsection__content--row">
                 <div class="subsection__about">
                     <div class="subsection__title">
                         Subsection Title
@@ -156,11 +194,7 @@
                 </div>
             </div>
 
-            <div class="subsection__content">
-                <div class="subsection__picture-content">
-                    <div class="subsection__spacer--green"></div>
-                    <img class="subsection__img" src="pictures/Rectangle7.png">
-                </div>
+            <div class="subsection__content subsection__content--sm-rev">
                 <div class="subsection__about">
                     <div class="subsection__title">
                         Subsection Title
@@ -186,10 +220,14 @@
                         from a mandate from the masses, not from some farcical aquatic ceremony.
                     </p>
                 </div>
+                <div class="subsection__picture-content subsection__picture-content--sm-reverse">
+                    <div class="subsection__spacer--green"></div>
+                    <img class="subsection__img" src="pictures/Rectangle7.png">
+                </div>
             </div>
             <div class="subsection__button">
                 <div class="subsection__background">
-                    <a class="subsection__link" href="#">LEARN MORE</a>
+                    <a class="subsection__link" href="javascript:void(0);">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -200,9 +238,9 @@
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide"><img src="pictures/carousel/Rectangle 12.png"></li>
-                        <li class="glide__slide"><img src="pictures/carousel/Rectangle 14 (1).png"></li>
-                        <li class="glide__slide"><img src="pictures/carousel/Rectangle 14.png"></li>
+                        <li class="glide__slide"><img class="glide__pic" src="pictures/carousel/Rectangle 12.png"></li>
+                        <li class="glide__slide"><img class="glide__pic" src="pictures/carousel/Rectangle 14 (1).png"></li>
+                        <li class="glide__slide"><img class="glide__pic" src="pictures/carousel/Rectangle 14.png"></li>
                     </ul>
                 
                 <div class="glide__arrows" data-glide-el="controls">
@@ -213,13 +251,16 @@
             </div>
             <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
             <script>
-
+                
                 new Glide('.glide',{
                     type: "carousel",
                     perView: 3,
                     gap: 24,
                     focusAt: "center",
-                    peek: 100
+                    peek: 100,
+                    breakpoints: {
+                        700: { perView: 1, peek: 30, gap: 16 }
+                    }
                 }).mount();
             </script>
         </div>
@@ -236,8 +277,8 @@
                 </div>
                 <div class="section-email__input">
                     <input type="text" placeholder="example@gmail.com" class="section-email__input-text">
-                    <a class="section-email__button" href="#">
-                        SEND
+                    <a class="section-email__button" href="javascript:void(0);">
+                        <text>SEND</text>
                     </a>
                 </div>
             </div>
@@ -268,29 +309,29 @@
             </div>
             <div class="footer-container__products">
                 <div>Products</div>
-                <a href="#">Pricing</a>
-                <a href="#">Testimonials</a>
-                <a href="#"v>Get it Now</a>
+                <a href="javascript:void(0);">Pricing</a>
+                <a href="javascript:void(0);">Testimonials</a>
+                <a href="javascript:void(0);"v>Get it Now</a>
             </div>
             <div class="footer-container__company">
                 <div>Company</div>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="javascript:void(0);">About</a>
+                <a href="javascript:void(0);">Blog</a>
+                <a href="javascript:void(0);">Contact</a>
             </div>
             <div class="footer-container__socials">
                 <div>Follow Us</div>
                 <div class="footer-container__pictures">
-                    <a href="#" class="footer-container__elipse">
+                    <a href="javascript:void(0);" class="footer-container__elipse">
                         <img class="section-container__img" src="pictures/VectorFB.png">
                     </a>
-                    <a href="#" class="footer-container__elipse">
+                    <a href="javascript:void(0);" class="footer-container__elipse">
                         <img class="section-container__img" src="pictures/VectorTwit.png">
                     </a>
-                    <a href="#" class="footer-container__elipse">
+                    <a href="javascript:void(0);" class="footer-container__elipse">
                         <img class="section-container__img" src="pictures/VectorLink.png">
                     </a>
-                    <a href="#" class="footer-container__elipse">
+                    <a href="javascript:void(0);" class="footer-container__elipse">
                         <img class="section-container__img" src="pictures/VectorTube.png">
                     </a>
                 </div>

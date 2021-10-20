@@ -11,7 +11,7 @@
         margin-top: 120px;
         margin-bottom: 86px;
     }
-    .glide{
+    .glide{ 
         .glide__arrows{
             position: absolute;
             margin-top: -228px;
@@ -29,14 +29,14 @@
                 border: 0px;
             }
             .glide__arrow--left{
-                margin-left: 133px;
+                margin-left: 42px;
                 img{
                     
                     transform: matrix(-1, 0, 0, 1, 0, 0);
                 }
             }
             .glide__arrow--right{
-                margin-right: 133px;
+                margin-right: 42px;
             }
             
         }

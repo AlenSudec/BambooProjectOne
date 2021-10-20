@@ -4,6 +4,8 @@ $grey-color: #FEFEFE;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    overflow: hidden;
+    
     .hero-container__img{
         box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.25);
         grid-column: 1 / 17;
@@ -11,11 +13,11 @@ $grey-color: #FEFEFE;
         justify-self: stretch;
     }
     .hero-container__box{
-        grid-column: 3/ 8;
+        grid-column: 3 / 8;
         grid-row: 3 / 6;
-        z-index: 10;
         display: flex;
-        flex-direction: row;
+        z-index: 10;
+        flex-direction: row;   
     }
     .hero-container__spacer--green{
         background: $primary-color;
@@ -26,10 +28,12 @@ $grey-color: #FEFEFE;
         padding-left: 30px;
         padding-right: 15px;
         color: $grey-color;
+       
         h1 {
             font-weight: 600;
             font-size: 3em;
             line-height: 56px;
+    
         }
         p {
             font-weight: 400;

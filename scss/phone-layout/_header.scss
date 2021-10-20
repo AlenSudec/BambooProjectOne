@@ -1,0 +1,30 @@
+@include sm{
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        .hero-container__img{
+            content: url("/pictures/phone/Rectangle4.png");
+        }
+        .hero-container__box{
+            flex-direction: column-reverse;
+        }
+        .hero-container__spacer--green{
+            width: 375px;
+            height: 50px;
+            transform: rotate(-180deg);
+        }
+        .hero-container__content{
+            padding: 32px;
+            h1{
+                font-size: 2.25em;
+                line-height: 42.26px;
+                text-align: center;
+                margin-top: 0px;
+            }
+            p{
+                font-size: 1em;
+                line-height: 18.78px;
+            }
+        }
+    }
+}

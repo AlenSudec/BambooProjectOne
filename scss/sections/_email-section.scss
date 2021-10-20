@@ -3,6 +3,10 @@
     font-size: 18px;
     line-height: 21px;
     color: rgba(51, 51, 51, 0.7);
+    // @include sm{
+    //     font-size: 16px;
+    //     line-height: 18.78px;
+    // }
 }
 
 .section-email{
@@ -10,56 +14,101 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    // @include sm{
+    //     padding-top: 48px;
+    //     padding-bottom: 48px;
+    //     padding-left: 32px;
+    //     padding-right: 32px;
+    // }
     .section-email__content{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 24px; 
-    }
-    .section-email__title{
-        font-weight: 700;
-        font-size: 3em;
-        line-height: 56px;
-        color: $secondary-color;
-    }
-    .section-email__text{
-        font-weight: 500;
-        font-size: 1.5em;
-        line-height: 28.18px;
-        text-align-last: center;
-        margin-left: 432px;
-        margin-right: 432px;
-        margin-bottom: calc( 70px - 24px );
-    }
-    .section-email__input{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border: 1px solid $grey-color;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-        border-radius: 12px;
-        padding-left: 20px;
-        width: 696px;
-        height: 64px;
-        .section-email__input-text{
-            font-style: italic;
-            font-size: 1.125em;
-            color: rgba(51, 51, 51, 0.7);
-            align-self: center;
-            border: 0px;
-        }
-        .section-email__button{
-            background: $primary-color;
-            border-radius: 12px;
-            padding: 10px 27px;
+        gap: 24px;
+        // @include sm{
+        //     gap: 32px;
+        // }
+        .section-email__title{
             font-weight: 700;
-            font-size: 1.5em;
-            line-height: 28px;
-            margin: 8px;
-            border: 0px;
+            font-size: 3em;
+            line-height: 56px;
             color: $secondary-color;
-            text-decoration: none;
+            // @include sm{
+            //     font-size: 36px;
+            //     line-height: 42.26px;
+            // }
+        }
+        .section-email__text{
+            font-weight: 500;
+            font-size: 1.5em;
+            line-height: 28.18px;
+            text-align-last: center;
+            margin-left: 432px;
+            margin-right: 432px;
+            margin-bottom: calc( 70px - 24px );
+            // @include sm{
+            //     font-size: 16px;
+            //     line-height: 18.78px;
+            //     margin: 0px;
+            //     text-align: center;
+            // }
+        }
+        .section-email__input{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 1px solid $grey-color;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            padding-left: 20px;
+            width: 696px;
+            height: 64px;
+            // @include sm{
+            //     width: 312px;
+            //     height: 48px;
+            // }
+            .section-email__input-text{
+                font-style: italic;
+                font-size: 1.125em;
+                color: rgba(51, 51, 51, 0.7);
+                align-self: center;
+                border: 0px;
+            }
+            .section-email__button{
+                background: $primary-color;
+                border-radius: 12px;
+                padding: 10px 27px;
+                font-weight: 700;
+                font-size: 1.5em;
+                line-height: 28px;
+                margin: 8px;
+                border: 0px;
+                color: $secondary-color;
+                text-decoration: none;
+                // @include sm{
+                //     margin: 0px;
+                //     padding: 0px;
+                //     font-size: 18px;
+                //     line-height: 21.13px;
+                //     border-radius: 0px 12px 12px 0px;
+                //     text-align: center;
+                //     width: 102px;
+                //     height: 48px;
+                //     display: flex;
+                //     flex-direction: row;
+                //     justify-content: center;
+                //     align-items: center;
+                //     margin-top: -1px;
+                //     margin-right: -1px;
+                   
+                    
+                // }
+            }
         }
     }
+    
+    
+   
 }

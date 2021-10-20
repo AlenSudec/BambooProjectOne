@@ -1,0 +1,45 @@
+@include sm{
+    ::placeholder{
+        font-size: 1em;
+        line-height: 18.78px;
+    }
+    .section-email{
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 32px;
+        padding-right: 32px;
+        .section-email__content{
+            gap: 32px;
+            .section-email__title{
+                font-size: 2.25em;
+                line-height: 42.26px;
+            }
+            .section-email__text{
+                font-size: 1em;
+                line-height: 18.78px;
+                margin: 0px;
+                text-align: center;
+            }
+            .section-email__input{  
+                width: 312px;
+                height: 48px;
+                .section-email__button{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 1.125em;
+                    line-height: 21.13px;
+                    border-radius: 0px 12px 12px 0px;
+                    text-align: center;
+                    width: 102px;
+                    height: 48px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -1px;
+                    margin-right: -1px;
+                }
+            }
+        }   
+    }
+}

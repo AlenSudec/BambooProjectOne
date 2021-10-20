@@ -1,0 +1,42 @@
+@include sm{
+    .navigation-bar{
+        width: 100%;
+        height: 64px;
+        overflow: hidden;
+    
+        .navigation-bar__content{
+            padding: 0px;
+            height: 64px;
+        }
+        .navigation-bar__box--white{
+            width: 148px;
+            height: 52px;
+            margin-left: 32px;
+            margin-bottom: 12px;
+            padding: 0px;
+            .navigation-bar__text{
+                h1{
+                    text-align: center;
+                    margin-top: 25px;
+                    font-size: 2.375em;
+                }
+            }
+        }
+        .navigation-bar__section{
+            display: none;
+        }
+        .navigation-bar__hamburger{
+            display: block !important;
+            float: right;
+            width: 32px;
+            height: 32px;
+            background: $white-color;
+            margin-right: 16px;
+            i{
+                padding: 9px;
+                color: $secondary-color;
+            }
+        }
+        
+    }
+}

@@ -11,7 +11,9 @@ body{
     margin: 0px;
     font-family: Raleway;
 }
-    
+
+
+  
     
 .navigation-bar{
     background: $primary-color;
@@ -28,7 +30,7 @@ body{
         padding: 6px;
         .navigation-bar__text{
             z-index: 10;
-            position: relative;
+            position: relative; 
         }
     }
     .navigation-bar__spacer{

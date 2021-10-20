@@ -1,0 +1,59 @@
+@include sm{
+    .hamburger-block{
+        background:$white-color;
+        height: 100%;
+        width: 100%;
+        z-index: 21;
+        position: absolute;
+        overflow: hidden;
+        .hamburger-block__button{
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .hamburger-block__exit{
+                font-size: 1.55em;
+                margin-right: 40px;
+            }
+            
+        }
+        .hamburger-block__section{
+            display: flex;
+            flex-direction: column;
+            margin-top: 88px;
+            margin-left: 32px;
+            gap: 32px;
+            .hamburger-block__link{
+                color: $secondary-color;
+                text-decoration: none;
+                font-family: Raleway;
+                font-weight: 600;
+                font-size: 1.5em;
+                line-height: 28,18px;
+            }
+            
+        }
+        .hamburger-block__button-get{
+            background: $primary-color;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+            width: 160px;
+            height: 56px;
+            margin-top: 250px;
+            margin-left: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            a {
+                text-transform: uppercase;
+                font-family: Raleway;
+                font-weight: bold;
+                font-size: 1.125em;
+                line-height: 21px;
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        
+    }
+}
