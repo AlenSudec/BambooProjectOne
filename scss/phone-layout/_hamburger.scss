@@ -1,4 +1,31 @@
+.hamburger-block{
+    display: none;
+}
 @include sm{
+    .stop-scrolling{
+        height: 100%;
+        overflow: hidden;
+    }
+    .hamburger-block--animate{
+        animation-name: hamb-add;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        @keyframes hamb-add {
+            from { right: -100%; }
+            to { right: 0%; }
+        }
+    }
+    .hamburger-block--animate-reverse{
+        animation-name: hamb-remove;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        @keyframes hamb-remove {
+            from { right: 0%; }
+            to { right: -100%; }
+        }
+    }
     .hamburger-block{
         background:$white-color;
         height: 100%;
@@ -6,6 +33,10 @@
         z-index: 21;
         position: absolute;
         overflow: hidden;
+        right: -100%;
+        display: block;
+
+       
         .hamburger-block__button{
             margin-top: 25px;
             display: flex;

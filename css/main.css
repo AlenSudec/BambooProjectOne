@@ -390,14 +390,43 @@ body {
       .navigation-bar .navigation-bar__hamburger i {
         padding: 9px;
         color: #333333; } }
+.hamburger-block {
+  display: none; }
+
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden; }
+
+  .hamburger-block--animate {
+    animation-name: hamb-add;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  @keyframes hamb-add {
+    from {
+      right: -100%; }
+    to {
+      right: 0%; } }
+  .hamburger-block--animate-reverse {
+    animation-name: hamb-remove;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  @keyframes hamb-remove {
+    from {
+      right: 0%; }
+    to {
+      right: -100%; } }
   .hamburger-block {
     background: #ffffff;
     height: 100%;
     width: 100%;
     z-index: 21;
     position: absolute;
-    overflow: hidden; }
+    overflow: hidden;
+    right: -100%;
+    display: block; }
     .hamburger-block .hamburger-block__button {
       margin-top: 25px;
       display: flex;

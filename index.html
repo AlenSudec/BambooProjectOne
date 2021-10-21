@@ -10,7 +10,7 @@
         <title>Bamboo - Project One</title>
     </head>
     <body>
-        <div id="hamburger-block" class="hamburger-block" style="display: none;">
+        <div id="hamburger-block" class="hamburger-block">
             <div class="hamburger-block__button">
                 <a class="hamburger-block__exit" onclick="hideHamburger()">X</a>
             </div>
@@ -54,14 +54,18 @@
                         <script>
                             let hamburgerBlock = document.getElementById("hamburger-block");
                             function showHamburger(){
-                                hamburgerBlock.style.display = "block";
-                                var x = window.scrollX;
-                                var y = window.scrollY;
-                                window.onscroll=function(){window.scrollTo(x,y); };
+                                // var x = window.scrollX;
+                                // var y = window.scrollY;
+                                // window.onscroll=function(){window.scrollTo(x,y); };
+                                document.body.classList.add("stop-scrolling");
+                                hamburgerBlock.classList.remove("hamburger-block--animate-reverse");
+                                hamburgerBlock.classList.add("hamburger-block--animate");
                             }
                             function hideHamburger(){
-                                window.onscroll=function(){};
-                                hamburgerBlock.style.display = "none";
+                                // window.onscroll=function(){};
+                                hamburgerBlock.classList.remove("hamburger-block--animate");
+                                hamburgerBlock.classList.add("hamburger-block--animate-reverse");
+                                document.body.classList.remove("stop-scrolling");
                             }
                         </script>
                     </div>
