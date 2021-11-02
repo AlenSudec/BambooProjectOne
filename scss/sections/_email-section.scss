@@ -1,12 +1,12 @@
 ::placeholder{
     font-style: italic;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 1.125em;
+    line-height: $line-height-prop;
     color: rgba(51, 51, 51, 0.7);
-    // @include sm{
-    //     font-size: 16px;
-    //     line-height: 18.78px;
-    // }
+    @include sm{
+        font-size: 1em;
+        line-height: $line-height-prop;    
+    }
 }
 
 .section-email{
@@ -15,44 +15,44 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    // @include sm{
-    //     padding-top: 48px;
-    //     padding-bottom: 48px;
-    //     padding-left: 32px;
-    //     padding-right: 32px;
-    // }
+    @include sm{
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 32px;
+        padding-right: 32px;    
+    }
     .section-email__content{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
-        // @include sm{
-        //     gap: 32px;
-        // }
+        @include sm{
+            gap: 32px;    
+        }
         .section-email__title{
             font-weight: 700;
             font-size: 3em;
-            line-height: 56px;
+            line-height: $line-height-prop;
             color: $secondary-color;
-            // @include sm{
-            //     font-size: 36px;
-            //     line-height: 42.26px;
-            // }
+            @include sm{
+                font-size: 2.25em;
+                line-height: $line-height-prop;    
+            }
         }
         .section-email__text{
             font-weight: 500;
             font-size: 1.5em;
-            line-height: 28.18px;
+            line-height: $line-height-prop;
             text-align-last: center;
             margin-left: 432px;
             margin-right: 432px;
             margin-bottom: calc( 70px - 24px );
-            // @include sm{
-            //     font-size: 16px;
-            //     line-height: 18.78px;
-            //     margin: 0px;
-            //     text-align: center;
-            // }
+            @include sm{
+                font-size: 1em;
+                line-height: $line-height-prop;
+                margin: 0px;
+                text-align: center;    
+            }
         }
         .section-email__input{
             display: flex;
@@ -65,10 +65,10 @@
             padding-left: 20px;
             width: 696px;
             height: 64px;
-            // @include sm{
-            //     width: 312px;
-            //     height: 48px;
-            // }
+            @include sm{
+                width: 312px;
+                height: 48px;    
+            }
             .section-email__input-text{
                 font-style: italic;
                 font-size: 1.125em;
@@ -82,29 +82,27 @@
                 padding: 10px 27px;
                 font-weight: 700;
                 font-size: 1.5em;
-                line-height: 28px;
+                line-height: $line-height-prop;
                 margin: 8px;
                 border: 0px;
                 color: $secondary-color;
                 text-decoration: none;
-                // @include sm{
-                //     margin: 0px;
-                //     padding: 0px;
-                //     font-size: 18px;
-                //     line-height: 21.13px;
-                //     border-radius: 0px 12px 12px 0px;
-                //     text-align: center;
-                //     width: 102px;
-                //     height: 48px;
-                //     display: flex;
-                //     flex-direction: row;
-                //     justify-content: center;
-                //     align-items: center;
-                //     margin-top: -1px;
-                //     margin-right: -1px;
-                   
-                    
-                // }
+                @include sm{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 1.125em;
+                    line-height: $line-height-prop;
+                    border-radius: 0px 12px 12px 0px;
+                    text-align: center;
+                    width: 102px;
+                    height: 48px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -1px;
+                    margin-right: -1px;    
+                }
             }
         }
     }

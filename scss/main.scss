@@ -1,5 +1,6 @@
+@import 'abstracts/_variables';
+@import 'abstracts/_breakpoints';
 
-@import 'phone-layout/_breakpoints';
 @import 'sections/_navigation';
 @import 'sections/_header';
 @import 'sections/_cards';
@@ -7,13 +8,12 @@
 @import 'sections/_carousel';
 @import 'sections/_email-section';
 @import 'sections/_footer';
+@import 'sections/_hamburger';
 
-@import 'phone-layout/_navigation';
-@import 'phone-layout/_hamburger';
-@import 'phone-layout/_cards';
-@import 'phone-layout/_carousel';
-@import 'phone-layout/_email_section';
-@import 'phone-layout/_header';
-@import 'phone-layout/_footer';
-@import 'phone-layout/_subsection';   
+
+
+
+
+
+ 
 

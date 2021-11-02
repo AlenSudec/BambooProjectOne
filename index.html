@@ -54,17 +54,19 @@
                         <script>
                             let hamburgerBlock = document.getElementById("hamburger-block");
                             function showHamburger(){
-                                // var x = window.scrollX;
-                                // var y = window.scrollY;
-                                // window.onscroll=function(){window.scrollTo(x,y); };
                                 document.body.classList.add("stop-scrolling");
                                 hamburgerBlock.classList.remove("hamburger-block--animate-reverse");
+                                hamburgerBlock.classList.remove("hamburger-block--hide");
                                 hamburgerBlock.classList.add("hamburger-block--animate");
+                                hamburgerBlock.classList.add("hamburger-block--show");
                             }
                             function hideHamburger(){
-                                // window.onscroll=function(){};
                                 hamburgerBlock.classList.remove("hamburger-block--animate");
                                 hamburgerBlock.classList.add("hamburger-block--animate-reverse");
+                                setTimeout(function() {
+                                    hamburgerBlock.classList.remove("hamburger-block--show");
+                                    hamburgerBlock.classList.add("hamburger-block--hide");
+                                },500);
                                 document.body.classList.remove("stop-scrolling");
                             }
                         </script>
@@ -343,8 +345,8 @@
         </div>
         <div class="bottom-nav">
             <div>2020 © PanDoo</div>
-            <div>GDPR</div>
-            <div>Privacy</div>
+            <a href="javascript:void(0);">GDPR</a>
+            <a href="javascript:void(0);">Privacy</a>
         </div>
     </body>
 </html>

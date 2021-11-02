@@ -1,44 +1,72 @@
-$grey-color: #FEFEFE;
+
 
 .hero-container{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(8, 1fr);
     overflow: hidden;
+    @include sm{
+        display: flex;
+        flex-direction: column;    
+    }
     
     .hero-container__img{
         box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.25);
         grid-column: 1 / 17;
         grid-row: 1 / 9;
         justify-self: stretch;
+        @include sm{
+            content: url("/pictures/phone/Rectangle4.png");    
+        }
     }
     .hero-container__box{
         grid-column: 3 / 8;
         grid-row: 3 / 6;
         display: flex;
         z-index: 10;
-        flex-direction: row;   
+        flex-direction: row;
+        @include sm{
+            flex-direction: column-reverse;    
+        }
     }
     .hero-container__spacer--green{
         background: $primary-color;
         width: 100px;
+        @include sm{
+            width: 375px;
+            height: 50px;
+            transform: rotate(-180deg);    
+        }
     }
     .hero-container__content{
         background: $secondary-color;
         padding-left: 30px;
         padding-right: 15px;
         color: $grey-color;
+        @include sm{
+            padding: 32px;    
+        }
        
         h1 {
             font-weight: 600;
             font-size: 3em;
-            line-height: 56px;
+            line-height: $line-height-prop;
+            @include sm{
+                font-size: 2.25em;
+                line-height: $line-height-prop;
+                text-align: center;
+                margin-top: 0px;    
+            }
     
         }
         p {
             font-weight: 400;
             font-size: 1.125em;
-            line-height: 21px;  
+            line-height: $line-height-prop;
+            @include sm{
+                font-size: 1em;
+                line-height: $line-height-prop;    
+            }
         }
     }
 }

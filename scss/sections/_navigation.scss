@@ -2,11 +2,6 @@
     display: none;
 }
     
-
-$primary-color: #87DE87; 
-$secondary-color: #333333;
-$white-color: #ffffff;
-
 body{
     margin: 0px;
     font-family: Raleway;
@@ -17,20 +12,43 @@ body{
     
 .navigation-bar{
     background: $primary-color;
+    @include sm{
+        width: 100%;
+        height: 64px;
+        overflow: hidden;    
+    }
     .navigation-bar__content{
         padding: 29px 108px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include sm{
+            padding: 0px;
+            height: 64px;    
+        }
     }
     .navigation-bar__box--white{
         background: $white-color;
         width: 85px;
         height: 30px;
         padding: 6px;
+        @include sm{
+            width: 148px;
+            height: 52px;
+            margin-left: 32px;
+            margin-bottom: 12px;
+            padding: 0px;    
+        }
         .navigation-bar__text{
             z-index: 10;
-            position: relative; 
+            position: relative;
+            h1{
+                @include sm{
+                    text-align: center;
+                    margin-top: 25px;
+                    font-size: 2.375em;
+                }       
+            }
         }
     }
     .navigation-bar__spacer{
@@ -40,6 +58,23 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
+        @include sm{
+            display: none;    
+        }
+    }
+    .navigation-bar__hamburger{
+        @include sm{
+            display: block !important;
+            float: right;
+            width: 32px;
+            height: 32px;
+            background: $white-color;
+            margin-right: 16px;
+            i{
+                padding: 9px;
+                color: $secondary-color;
+            }    
+        }
     }
     .navigation-bar__link{
         color: $secondary-color;
@@ -49,7 +84,7 @@ body{
         font-family: Raleway;
         font-weight: 600;
         font-size: 1.125em;
-        line-height: 21,13px;
+        line-height: $line-height-prop;
     }
     .navigation-bar__button{
         background: $white-color;
@@ -61,9 +96,11 @@ body{
             font-family: Raleway;
             font-weight: bold;
             font-size: 1.125em;
-            line-height: 21px;
+            line-height: $line-height-prop;
             text-decoration: none;
             color: $secondary-color;
         }
     }
 }
+
+

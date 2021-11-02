@@ -5,11 +5,17 @@
     align-items: center;
     .carousel__title{
         font-weight: 700;
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 3em;
+        line-height: $line-height-prop;
         color: $secondary-color;
         margin-top: 120px;
         margin-bottom: 86px;
+        @include sm{
+            font-size: 2.25em;
+            line-height: $line-height-prop;
+            margin-top: 48px;
+            margin-bottom: 46px;    
+        }
     }
     .glide{ 
         .glide__arrows{
@@ -20,13 +26,8 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            .glide__arrow--left, .glide__arrow--right{
-                width: 100px;
-                height: 100px;
-                background: $primary-color;
-                border-radius: 50%;
-                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-                border: 0px;
+            @include sm{
+                margin-top: -200px;    
             }
             .glide__arrow--left{
                 margin-left: 42px;
@@ -38,7 +39,32 @@
             .glide__arrow--right{
                 margin-right: 42px;
             }
+            .glide__arrow--left, .glide__arrow--right{
+                width: 100px;
+                height: 100px;
+                background: $primary-color;
+                border-radius: 50%;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+                border: 0px;
+                @include sm{
+                    background: #FFFFFF;
+                    width: 32px;
+                    height: 32px;
+                    text-align: center;
+                    img{
+                        content: url("/pictures/phone/Arrow\ Forward.png");    
+                    }    
+                }
+            }
             
+            
+        }
+        .glide__track .glide__slides .glide__slide .glide__pic {
+            object-fit: contain;
+            @include sm{
+                width: 312px;
+                height: 321px;    
+            }
         }
     }
 }

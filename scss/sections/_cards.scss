@@ -1,62 +1,67 @@
 .section-card{
     padding: 120px 108px;
     overflow: hidden;
-    // @include sm{
-    //     padding-top: 47.77px;
-    //     padding-bottom: 0px;
-    //     padding-left: 32px;
-    //     padding-right: 32px;
-    // }
+    @include sm{
+        padding-top: 47.77px;
+        padding-bottom: 0px;
+        padding-left: 32px;
+        padding-right: 32px;    
+    }
+    
     .section-card__title{
         text-align: center;
         font-weight: 700;
         font-size: 3em;
-        line-height: 56px;
+        line-height: $line-height-prop;
         padding-bottom: 86px;
-        // @include sm{
-        //     font-size: 2.25em;
-        //     line-height: 42.26px;
-        //     padding-bottom: 94px;
-        // }
+        @include sm{
+            font-size: 2.25em;
+            line-height: $line-height-prop;
+            padding-bottom: 94px;    
+        }
+        
     }
     .section-card__title-section{
         display: flex;
         flex-direction: row;
         align-items: center;
-        // @include sm{
-        //     flex-direction: column;
-           
-        // }
+        @include sm{
+            flex-direction: column;    
+        }
+        
         .section-card__img-circle{
             background: $primary-color;
             border-radius: 50%;
             padding: 15px;
-            // @include sm{
-            //     margin-top: -85px;
-            // }
+            @include sm{
+                margin-top: -85px;    
+            }
+            
         }
         .section-card__titles{
             padding-left: 20px;
             font-size: 1.5em;
-            // @include sm{
-            //     padding-left: 0px;
-            //     padding-top: 32px;
-            //     padding-bottom: 24px;
-            //     text-align: center;
-            // }
+            @include sm{
+                padding-left: 0px;
+                padding-top: 32px;
+                padding-bottom: 24px;
+                text-align: center;    
+            }
+            
             .section-card__title-main{
                 font-weight: 600;
-                line-height: 28px;
+                line-height: $line-height-prop;
                 
             }
             .section-card__subtitle{
                 font-weight: 400;
                 font-style: italic;
-                line-height: 28px;
+                line-height: $line-height-prop;
                 padding-top: 5px;
-                // @include sm{
-                //     padding-top: 10px;
-                // }
+                @include sm{
+                    padding-top: 10px;    
+                }
+                
             }
         }
     }
@@ -66,27 +71,28 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 24px;
-        // @include sm{
-        //     flex-direction: column;
-        //     gap: 50px;
-        // }
+        @include sm{
+            flex-direction: column;
+            gap: 50px;    
+        }
+       
     }
     .section-card__card{
         background: $secondary-color;
         color: $grey-color;
         padding: 32px;
-        // @include sm{
-            
-        //     margin-bottom: 32px;
-        //     padding-left: 16px;
-        //     padding-right: 16px;
-        //     padding-bottom: 0px;
-        // }
+        @include sm{
+            margin-bottom: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 0px;    
+        }
+       
         .section-card__content{
             p{
                 font-weight: 400;
                 font-size: 1.125em;
-                line-height: 21px;
+                line-height: $line-height-prop;
             }
         }
     }
